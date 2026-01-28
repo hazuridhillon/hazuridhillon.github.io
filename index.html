@@ -1,2 +1,903 @@
-Hazuri Dhillon
-Senior at Babson College | Aspiring Entrepreneur | Tech Enthusiast | Lifelong Learner
+<!DOCTYPE html>
+<!-- This tells the browser this is an HTML5 document -->
+
+<html lang="en">
+<!-- The main container for the entire webpage. lang="en" means the page is in English -->
+
+<head>
+    <!-- The HEAD section contains information ABOUT the page, not content that appears on the page -->
+    
+    <meta charset="UTF-8">
+    <!-- This ensures special characters display correctly -->
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- This makes the website look good on phones and tablets -->
+    
+    <title>Hazuri K. Dhillon | Tech Entrepreneur × Fashion Innovator × AI Strategist</title>
+    <!-- This is what appears in the browser tab -->
+    
+    <!-- The next few lines import fonts from Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Work+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <style>
+        /* ============================================
+           STYLES (CSS) - This controls how things LOOK
+           ============================================ */
+        
+        /* RESET - Remove default spacing from all elements */
+        * {
+            margin: 0;              /* Remove default outer spacing */
+            padding: 0;             /* Remove default inner spacing */
+            box-sizing: border-box; /* Makes sizing more predictable */
+        }
+
+        /* COLORS - Define all colors in one place so they're easy to change */
+        :root {
+            --navy: #0A1828;           /* Dark blue - main text color */
+            --dark-navy: #051015;      /* Even darker blue - for backgrounds */
+            --gold: #D4AF37;           /* Gold - accent color */
+            --cream: #F8F6F0;          /* Off-white - background color */
+            --light-gray: #E8E4D9;     /* Light gray - for tags */
+            --text-secondary: #5A6B7F; /* Gray - for secondary text */
+        }
+
+        /* BODY - Basic styling for the entire page */
+        body {
+            font-family: 'Work Sans', sans-serif; /* The main font used throughout */
+            color: var(--navy);                   /* Default text color */
+            background-color: var(--cream);       /* Page background color */
+            line-height: 1.6;                     /* Space between lines of text */
+            overflow-x: hidden;                   /* Prevent horizontal scrolling */
+        }
+
+        /* HTML - Enable smooth scrolling when clicking navigation links */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* ============================================
+           NAVIGATION BAR AT THE TOP
+           ============================================ */
+        
+        nav {
+            position: fixed;                           /* Stays at top when scrolling */
+            top: 0;                                    /* Position at very top */
+            width: 100%;                               /* Full width of screen */
+            background-color: rgba(248, 246, 240, 0.95); /* Slightly transparent cream */
+            backdrop-filter: blur(10px);               /* Blur effect behind nav */
+            z-index: 1000;                             /* Appear above other content */
+            border-bottom: 1px solid rgba(10, 24, 40, 0.1); /* Subtle bottom border */
+        }
+
+        /* Navigation container - centers and spaces content */
+        nav .container {
+            max-width: 1200px;           /* Don't get wider than this */
+            margin: 0 auto;              /* Center the navigation */
+            padding: 1.5rem 2rem;        /* Space inside the nav bar */
+            display: flex;               /* Use flexbox for layout */
+            justify-content: space-between; /* Logo left, links right */
+            align-items: center;         /* Vertically center items */
+        }
+
+        /* Logo text in top left */
+        nav .logo {
+            font-family: 'Playfair Display', serif; /* Fancy serif font */
+            font-size: 1.5rem;                      /* Size of logo text */
+            font-weight: 700;                       /* Bold weight */
+            color: var(--navy);                     /* Dark blue color */
+            text-decoration: none;                  /* Remove underline */
+            letter-spacing: -0.5px;                 /* Tighten letter spacing */
+        }
+
+        /* Navigation links list */
+        nav ul {
+            display: flex;      /* Arrange links horizontally */
+            list-style: none;   /* Remove bullet points */
+            gap: 2.5rem;        /* Space between links */
+        }
+
+        /* Individual navigation links */
+        nav a {
+            color: var(--navy);          /* Dark blue text */
+            text-decoration: none;       /* No underline */
+            font-weight: 400;            /* Normal weight */
+            font-size: 0.95rem;          /* Slightly smaller than body */
+            transition: color 0.3s ease; /* Smooth color change on hover */
+            letter-spacing: 0.3px;       /* Slightly spread out letters */
+        }
+
+        /* Navigation links on hover (when mouse over them) */
+        nav a:hover {
+            color: var(--gold); /* Change to gold when hovering */
+        }
+
+        /* ============================================
+           HERO SECTION (First big section with name)
+           ============================================ */
+        
+        .hero {
+            min-height: 100vh;          /* Take up full screen height */
+            display: flex;              /* Use flexbox for centering */
+            align-items: center;        /* Center vertically */
+            justify-content: center;    /* Center horizontally */
+            text-align: center;         /* Center the text */
+            padding: 8rem 2rem 4rem;    /* Space around content (top, sides, bottom) */
+            background: linear-gradient(135deg, var(--cream) 0%, #EBE7DC 100%); /* Gradient background */
+            position: relative;         /* Needed for decorative element */
+            overflow: hidden;           /* Hide overflow from animation */
+        }
+
+        /* Decorative floating circle in background */
+        .hero::before {
+            content: '';                /* Required for pseudo-element */
+            position: absolute;         /* Position relative to hero section */
+            top: -50%;                  /* Start above the section */
+            right: -20%;                /* Start off the right side */
+            width: 600px;               /* Size of the circle */
+            height: 600px;              /* Size of the circle */
+            background: radial-gradient(circle, rgba(212, 175, 55, 0.1) 0%, transparent 70%); /* Fading gold circle */
+            border-radius: 50%;         /* Make it circular */
+            animation: float 20s ease-in-out infinite; /* Animate forever */
+        }
+
+        /* Animation for floating circle */
+        @keyframes float {
+            0%, 100% { transform: translate(0, 0) rotate(0deg); }      /* Start position */
+            50% { transform: translate(-30px, 30px) rotate(180deg); } /* Middle position */
+        }
+
+        /* Container for hero text content */
+        .hero-content {
+            max-width: 900px;                    /* Don't get too wide */
+            z-index: 1;                          /* Appear above background */
+            animation: fadeInUp 1s ease-out;    /* Fade in when page loads */
+        }
+
+        /* Fade in animation */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;                      /* Start invisible */
+                transform: translateY(30px);     /* Start below final position */
+            }
+            to {
+                opacity: 1;                      /* End fully visible */
+                transform: translateY(0);        /* End at normal position */
+            }
+        }
+
+        /* Main heading (your name) */
+        .hero h1 {
+            font-family: 'Playfair Display', serif; /* Fancy serif font */
+            font-size: 4.5rem;                      /* Large size */
+            font-weight: 700;                       /* Bold */
+            color: var(--navy);                     /* Dark blue */
+            margin-bottom: 1.5rem;                  /* Space below */
+            line-height: 1.1;                       /* Tight line spacing */
+            letter-spacing: -2px;                   /* Tighter letter spacing */
+        }
+
+        /* Tagline under the name */
+        .tagline {
+            font-size: 1.5rem;           /* Medium-large size */
+            color: var(--text-secondary); /* Gray color */
+            margin-bottom: 2rem;         /* Space below */
+            font-weight: 300;            /* Light weight */
+            letter-spacing: 1px;         /* Spread out letters */
+        }
+
+        /* Gold X symbols in tagline */
+        .tagline span {
+            color: var(--gold);   /* Gold color */
+            font-weight: 500;     /* Medium weight */
+        }
+
+        /* Description paragraph in hero */
+        .hero p {
+            font-size: 1.15rem;          /* Slightly larger than normal */
+            color: var(--text-secondary); /* Gray color */
+            max-width: 650px;            /* Don't get too wide */
+            margin: 0 auto 3rem;         /* Center and add bottom space */
+            line-height: 1.8;            /* Generous line spacing */
+        }
+
+        /* Call-to-action button */
+        .cta-button {
+            display: inline-block;        /* Behave like a button */
+            padding: 1rem 2.5rem;         /* Space inside button */
+            background-color: var(--navy); /* Dark blue background */
+            color: var(--cream);          /* Cream text */
+            text-decoration: none;        /* No underline */
+            border-radius: 2px;           /* Slightly rounded corners */
+            font-weight: 500;             /* Medium weight */
+            font-size: 1rem;              /* Normal size */
+            letter-spacing: 0.5px;        /* Slightly spread letters */
+            transition: all 0.3s ease;    /* Smooth changes on hover */
+            border: 2px solid var(--navy); /* Border same color as background */
+        }
+
+        /* Button on hover */
+        .cta-button:hover {
+            background-color: transparent; /* Remove background */
+            color: var(--navy);           /* Dark text */
+            transform: translateY(-2px);  /* Lift up slightly */
+            box-shadow: 0 10px 30px rgba(10, 24, 40, 0.15); /* Add shadow */
+        }
+
+        /* ============================================
+           GENERAL SECTION STYLES
+           ============================================ */
+        
+        section {
+            padding: 6rem 2rem;   /* Space around section content */
+            max-width: 1200px;    /* Don't get wider than this */
+            margin: 0 auto;       /* Center the section */
+        }
+
+        /* Section main title */
+        .section-title {
+            font-family: 'Playfair Display', serif; /* Fancy font */
+            font-size: 3rem;                        /* Large size */
+            font-weight: 700;                       /* Bold */
+            color: var(--navy);                     /* Dark blue */
+            margin-bottom: 1rem;                    /* Space below */
+            letter-spacing: -1px;                   /* Tight letters */
+        }
+
+        /* Section subtitle */
+        .section-subtitle {
+            font-size: 1.1rem;           /* Slightly large */
+            color: var(--text-secondary); /* Gray color */
+            margin-bottom: 4rem;         /* Large space below */
+            font-weight: 300;            /* Light weight */
+        }
+
+        /* ============================================
+           ABOUT SECTION
+           ============================================ */
+        
+        /* Two-column layout for about section */
+        .about-content {
+            display: grid;               /* Use grid layout */
+            grid-template-columns: 1fr 1fr; /* Two equal columns */
+            gap: 4rem;                   /* Space between columns */
+            align-items: center;         /* Vertically align */
+        }
+
+        /* Paragraphs in about section */
+        .about-text p {
+            font-size: 1.1rem;           /* Slightly large */
+            color: var(--text-secondary); /* Gray color */
+            margin-bottom: 1.5rem;       /* Space between paragraphs */
+            line-height: 1.8;            /* Generous line spacing */
+        }
+
+        /* Grid of statistics */
+        .about-stats {
+            display: grid;                  /* Use grid layout */
+            grid-template-columns: repeat(2, 1fr); /* 2 equal columns */
+            gap: 2rem;                      /* Space between items */
+            margin-top: 3rem;               /* Space above */
+        }
+
+        /* Individual statistic box */
+        .stat-item {
+            text-align: center;           /* Center text */
+            padding: 2rem;                /* Space inside box */
+            background: white;            /* White background */
+            border-radius: 4px;           /* Rounded corners */
+            border-left: 4px solid var(--gold); /* Gold left border */
+            transition: transform 0.3s ease; /* Smooth lift on hover */
+        }
+
+        /* Stat box on hover */
+        .stat-item:hover {
+            transform: translateY(-5px); /* Lift up */
+        }
+
+        /* Large number in stat box */
+        .stat-number {
+            font-family: 'Playfair Display', serif; /* Fancy font */
+            font-size: 2.5rem;                      /* Large size */
+            font-weight: 700;                       /* Bold */
+            color: var(--navy);                     /* Dark blue */
+            margin-bottom: 0.5rem;                  /* Space below */
+        }
+
+        /* Label under stat number */
+        .stat-label {
+            font-size: 0.95rem;          /* Slightly small */
+            color: var(--text-secondary); /* Gray color */
+            text-transform: uppercase;   /* ALL CAPS */
+            letter-spacing: 1px;         /* Spread out letters */
+        }
+
+        /* ============================================
+           PROJECTS SECTION
+           ============================================ */
+        
+        /* Grid of project cards */
+        .projects-grid {
+            display: grid;                              /* Use grid layout */
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); /* Responsive columns */
+            gap: 3rem;                                  /* Space between cards */
+            margin-top: 3rem;                           /* Space above */
+        }
+
+        /* Individual project card */
+        .project-card {
+            background: white;                           /* White background */
+            border-radius: 4px;                          /* Rounded corners */
+            overflow: hidden;                            /* Hide overflow */
+            transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+            border: 1px solid rgba(10, 24, 40, 0.1);    /* Subtle border */
+        }
+
+        /* Project card on hover */
+        .project-card:hover {
+            transform: translateY(-10px);               /* Lift up */
+            box-shadow: 0 20px 40px rgba(10, 24, 40, 0.1); /* Add shadow */
+        }
+
+        /* Top image area of project card */
+        .project-image {
+            width: 100%;                  /* Full width */
+            height: 250px;                /* Fixed height */
+            background: linear-gradient(135deg, var(--navy) 0%, var(--dark-navy) 100%); /* Blue gradient */
+            display: flex;                /* Use flexbox */
+            align-items: center;          /* Center vertically */
+            justify-content: center;      /* Center horizontally */
+            color: var(--cream);          /* Cream text */
+            font-family: 'Playfair Display', serif; /* Fancy font */
+            font-size: 3rem;              /* Large size */
+            font-weight: 700;             /* Bold */
+            position: relative;           /* For decorative element */
+            overflow: hidden;             /* Hide overflow */
+        }
+
+        /* Decorative rotating gradient in project image */
+        .project-image::before {
+            content: '';                  /* Required for pseudo-element */
+            position: absolute;           /* Position relative to parent */
+            top: -50%;                    /* Start above */
+            left: -50%;                   /* Start to the left */
+            width: 200%;                  /* Larger than container */
+            height: 200%;                 /* Larger than container */
+            background: radial-gradient(circle, rgba(212, 175, 55, 0.2) 0%, transparent 50%); /* Gold glow */
+            animation: rotate 20s linear infinite; /* Rotate forever */
+        }
+
+        /* Rotation animation */
+        @keyframes rotate {
+            from { transform: rotate(0deg); }   /* Start at 0 degrees */
+            to { transform: rotate(360deg); }   /* End at 360 degrees */
+        }
+
+        /* Content area of project card */
+        .project-content {
+            padding: 2rem; /* Space inside */
+        }
+
+        /* Project title */
+        .project-title {
+            font-family: 'Playfair Display', serif; /* Fancy font */
+            font-size: 1.5rem;                      /* Medium-large size */
+            font-weight: 600;                       /* Semi-bold */
+            color: var(--navy);                     /* Dark blue */
+            margin-bottom: 1rem;                    /* Space below */
+        }
+
+        /* Project description text */
+        .project-description {
+            color: var(--text-secondary); /* Gray color */
+            line-height: 1.7;            /* Generous line spacing */
+            margin-bottom: 1.5rem;       /* Space below */
+        }
+
+        /* Container for project tags */
+        .project-tags {
+            display: flex;      /* Use flexbox */
+            flex-wrap: wrap;    /* Wrap to next line if needed */
+            gap: 0.5rem;        /* Space between tags */
+        }
+
+        /* Individual tag pill */
+        .tag {
+            background-color: var(--light-gray); /* Light gray background */
+            color: var(--navy);                  /* Dark text */
+            padding: 0.4rem 1rem;                /* Space inside tag */
+            border-radius: 20px;                 /* Fully rounded pill shape */
+            font-size: 0.85rem;                  /* Small size */
+            font-weight: 500;                    /* Medium weight */
+        }
+
+        /* ============================================
+           EXPERIENCE SECTION
+           ============================================ */
+        
+        /* Timeline container */
+        .experience-timeline {
+            position: relative;        /* For positioning line */
+            padding-left: 3rem;        /* Make room for timeline line */
+            margin-top: 3rem;          /* Space above */
+        }
+
+        /* Vertical timeline line */
+        .experience-timeline::before {
+            content: '';               /* Required for pseudo-element */
+            position: absolute;        /* Position relative to container */
+            left: 0;                   /* Position at left edge */
+            top: 0;                    /* Start at top */
+            bottom: 0;                 /* Extend to bottom */
+            width: 2px;                /* Thin line */
+            background: linear-gradient(to bottom, var(--gold), var(--navy)); /* Gold to blue gradient */
+        }
+
+        /* Individual experience item */
+        .experience-item {
+            position: relative;        /* For positioning dot */
+            margin-bottom: 3rem;       /* Space below each item */
+            padding-left: 2rem;        /* Space for content */
+        }
+
+        /* Dot on timeline */
+        .experience-item::before {
+            content: '';               /* Required for pseudo-element */
+            position: absolute;        /* Position relative to item */
+            left: -3.5rem;            /* Position on the line */
+            top: 0;                    /* Align with top of content */
+            width: 12px;               /* Size of dot */
+            height: 12px;              /* Size of dot */
+            border-radius: 50%;        /* Make it circular */
+            background-color: var(--gold); /* Gold color */
+            border: 3px solid var(--cream); /* Cream border */
+        }
+
+        /* Experience job title */
+        .experience-title {
+            font-family: 'Playfair Display', serif; /* Fancy font */
+            font-size: 1.4rem;                      /* Medium-large size */
+            font-weight: 600;                       /* Semi-bold */
+            color: var(--navy);                     /* Dark blue */
+            margin-bottom: 0.5rem;                  /* Space below */
+        }
+
+        /* Company name */
+        .experience-company {
+            font-weight: 600;            /* Semi-bold */
+            color: var(--text-secondary); /* Gray color */
+            margin-bottom: 0.25rem;      /* Small space below */
+        }
+
+        /* Date range */
+        .experience-date {
+            font-size: 0.9rem;    /* Slightly small */
+            color: var(--gold);   /* Gold color */
+            margin-bottom: 1rem;  /* Space below */
+            font-weight: 500;     /* Medium weight */
+        }
+
+        /* Experience description */
+        .experience-description {
+            color: var(--text-secondary); /* Gray color */
+            line-height: 1.7;            /* Generous line spacing */
+        }
+
+        /* ============================================
+           CONTACT SECTION
+           ============================================ */
+        
+        /* Contact box */
+        .contact {
+            background: white;                         /* White background */
+            border-radius: 4px;                        /* Rounded corners */
+            padding: 4rem;                             /* Space inside */
+            text-align: center;                        /* Center text */
+            margin-top: 3rem;                          /* Space above */
+            border: 1px solid rgba(10, 24, 40, 0.1);  /* Subtle border */
+        }
+
+        /* Contact heading */
+        .contact-title {
+            font-family: 'Playfair Display', serif; /* Fancy font */
+            font-size: 2.5rem;                      /* Large size */
+            font-weight: 700;                       /* Bold */
+            color: var(--navy);                     /* Dark blue */
+            margin-bottom: 1rem;                    /* Space below */
+        }
+
+        /* Contact subtitle */
+        .contact-subtitle {
+            font-size: 1.1rem;           /* Slightly large */
+            color: var(--text-secondary); /* Gray color */
+            margin-bottom: 3rem;         /* Space below */
+        }
+
+        /* Container for social links */
+        .social-links {
+            display: flex;           /* Use flexbox */
+            justify-content: center; /* Center horizontally */
+            gap: 2rem;              /* Space between links */
+            flex-wrap: wrap;        /* Wrap to next line if needed */
+        }
+
+        /* Individual social link button */
+        .social-link {
+            display: inline-flex;         /* Inline flexbox */
+            align-items: center;          /* Vertically center */
+            gap: 0.5rem;                  /* Space between icon and text */
+            padding: 1rem 2rem;           /* Space inside button */
+            background-color: var(--cream); /* Cream background */
+            color: var(--navy);           /* Dark text */
+            text-decoration: none;        /* No underline */
+            border-radius: 2px;           /* Slightly rounded */
+            font-weight: 500;             /* Medium weight */
+            transition: all 0.3s ease;    /* Smooth hover effect */
+            border: 2px solid transparent; /* Invisible border (for hover) */
+        }
+
+        /* Social link on hover */
+        .social-link:hover {
+            background-color: var(--navy);  /* Dark background */
+            color: var(--cream);            /* Light text */
+            transform: translateY(-3px);    /* Lift up */
+            box-shadow: 0 10px 30px rgba(10, 24, 40, 0.15); /* Add shadow */
+        }
+
+        /* ============================================
+           FOOTER
+           ============================================ */
+        
+        footer {
+            background-color: var(--navy); /* Dark blue background */
+            color: var(--cream);           /* Cream text */
+            text-align: center;            /* Center text */
+            padding: 3rem 2rem;            /* Space inside */
+            margin-top: 6rem;              /* Large space above */
+        }
+
+        /* Footer text */
+        footer p {
+            font-size: 0.95rem; /* Slightly small */
+            opacity: 0.8;       /* Slightly transparent */
+        }
+
+        /* ============================================
+           RESPONSIVE DESIGN (For phones and tablets)
+           ============================================ */
+        
+        @media (max-width: 768px) {
+            /* When screen is 768px or smaller, apply these styles */
+            
+            /* Reduce spacing in navigation */
+            nav ul {
+                gap: 1.5rem;
+            }
+
+            /* Make nav links smaller */
+            nav a {
+                font-size: 0.85rem;
+            }
+
+            /* Make hero heading smaller */
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            /* Make tagline smaller */
+            .tagline {
+                font-size: 1.1rem;
+            }
+
+            /* Make section titles smaller */
+            .section-title {
+                font-size: 2rem;
+            }
+
+            /* Stack about section into one column */
+            .about-content {
+                grid-template-columns: 1fr; /* One column instead of two */
+                gap: 2rem;
+            }
+
+            /* Stack stats into one column */
+            .about-stats {
+                grid-template-columns: 1fr;
+            }
+
+            /* Stack projects into one column */
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+
+            /* Reduce padding in contact box */
+            .contact {
+                padding: 2rem;
+            }
+
+            /* Stack social links vertically */
+            .social-links {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- ============================================
+         PAGE CONTENT STARTS HERE
+         ============================================ -->
+
+    <!-- NAVIGATION BAR -->
+    <nav>
+        <div class="container">
+            <!-- Logo/initials on the left -->
+            <a href="#home" class="logo">HKD</a>
+            
+            <!-- Navigation links on the right -->
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION (First big section with your name) -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <!-- Your name as the main heading -->
+            <h1>Hazuri K. Dhillon</h1>
+            
+            <!-- Your tagline/subtitle -->
+            <p class="tagline">Tech Entrepreneur <span>×</span> Fashion Innovator <span>×</span> AI Strategist</p>
+            
+            <!-- Brief description about you -->
+            <p>Senior at Babson College bridging the gap between technology, fashion, and artificial intelligence. Building innovative solutions at the intersection of creative industries and emerging tech.</p>
+            
+            <!-- Button that scrolls to contact section -->
+            <a href="#contact" class="cta-button">Let's Connect</a>
+        </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="about">
+        <!-- Section title -->
+        <h2 class="section-title">About Me</h2>
+        
+        <!-- Section subtitle -->
+        <p class="section-subtitle">Building the future at the intersection of innovation and style</p>
+        
+        <div class="about-content">
+            <!-- Left column: Text about you -->
+            <div class="about-text">
+                <p>I'm a senior at Babson College with a passion for leveraging technology to transform the fashion and creative industries. My work focuses on developing AI-powered solutions that enhance creativity, streamline operations, and create meaningful experiences.</p>
+                
+                <p>With a background in tech entrepreneurship and a deep understanding of fashion innovation, I bridge the gap between technical capabilities and creative vision. I believe the future of fashion lies in the thoughtful integration of artificial intelligence and sustainable practices.</p>
+                
+                <p>Currently exploring opportunities in tech startups, fashion technology companies, and AI strategy consulting where I can apply my multidisciplinary expertise to drive innovation.</p>
+            </div>
+            
+            <!-- Right column: Statistics boxes -->
+            <div class="about-stats">
+                <!-- Each stat-item is a box with a number and label -->
+                <div class="stat-item">
+                    <div class="stat-number">5+</div>
+                    <div class="stat-label">Projects Launched</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">3</div>
+                    <div class="stat-label">Industries</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">2026</div>
+                    <div class="stat-label">Graduation Year</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">∞</div>
+                    <div class="stat-label">Possibilities</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJECTS SECTION -->
+    <section id="projects">
+        <h2 class="section-title">Featured Projects</h2>
+        <p class="section-subtitle">Innovation at the intersection of technology and creativity</p>
+        
+        <div class="projects-grid">
+            <!-- PROJECT 1 -->
+            <div class="project-card">
+                <!-- Top colored area with emoji/symbol -->
+                <div class="project-image">AI</div>
+                
+                <!-- Content area with title, description, and tags -->
+                <div class="project-content">
+                    <h3 class="project-title">AI-Powered Fashion Assistant</h3>
+                    <p class="project-description">Developed an intelligent styling assistant using machine learning to provide personalized fashion recommendations based on user preferences, body type, and current trends.</p>
+                    <div class="project-tags">
+                        <span class="tag">Machine Learning</span>
+                        <span class="tag">Fashion Tech</span>
+                        <span class="tag">Python</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PROJECT 2 -->
+            <div class="project-card">
+                <div class="project-image">♻</div>
+                <div class="project-content">
+                    <h3 class="project-title">Sustainable Fashion Platform</h3>
+                    <p class="project-description">Created a marketplace connecting conscious consumers with sustainable fashion brands, featuring transparency tools to track environmental impact and ethical production.</p>
+                    <div class="project-tags">
+                        <span class="tag">Sustainability</span>
+                        <span class="tag">E-commerce</span>
+                        <span class="tag">Social Impact</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PROJECT 3 -->
+            <div class="project-card">
+                <div class="project-image">📊</div>
+                <div class="project-content">
+                    <h3 class="project-title">Trend Forecasting Analytics</h3>
+                    <p class="project-description">Built a data analytics tool that predicts emerging fashion trends by analyzing social media, runway shows, and consumer behavior patterns using advanced AI algorithms.</p>
+                    <div class="project-tags">
+                        <span class="tag">Data Science</span>
+                        <span class="tag">Predictive Analytics</span>
+                        <span class="tag">AI Strategy</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- EXPERIENCE SECTION -->
+    <section id="experience">
+        <h2 class="section-title">Experience</h2>
+        <p class="section-subtitle">A journey through innovation and leadership</p>
+        
+        <div class="experience-timeline">
+            <!-- EXPERIENCE 1 -->
+            <div class="experience-item">
+                <h3 class="experience-title">Student Entrepreneur</h3>
+                <p class="experience-company">Babson College</p>
+                <p class="experience-date">2022 - Present</p>
+                <p class="experience-description">Leading multiple entrepreneurial initiatives focused on fashion technology and AI applications. Collaborated with industry professionals to develop innovative solutions for real-world challenges in the fashion industry.</p>
+            </div>
+
+            <!-- EXPERIENCE 2 -->
+            <div class="experience-item">
+                <h3 class="experience-title">AI Strategy Intern</h3>
+                <p class="experience-company">Fashion Tech Startup</p>
+                <p class="experience-date">Summer 2024</p>
+                <p class="experience-description">Developed AI implementation strategies for fashion retail operations. Conducted market research and competitive analysis to identify opportunities for AI integration in customer experience and inventory management.</p>
+            </div>
+
+            <!-- EXPERIENCE 3 -->
+            <div class="experience-item">
+                <h3 class="experience-title">Technology Consultant</h3>
+                <p class="experience-company">Boutique Fashion Brand</p>
+                <p class="experience-date">2023 - 2024</p>
+                <p class="experience-description">Advised emerging fashion brand on digital transformation strategy, implementing e-commerce solutions and social media marketing campaigns that increased online engagement by 200%.</p>
+            </div>
+
+            <!-- EXPERIENCE 4 -->
+            <div class="experience-item">
+                <h3 class="experience-title">Research Assistant</h3>
+                <p class="experience-company">Babson Innovation Lab</p>
+                <p class="experience-date">2023</p>
+                <p class="experience-description">Conducted research on the intersection of artificial intelligence and creative industries, publishing findings on AI's impact on fashion design and sustainable production methods.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact">
+        <div class="contact">
+            <h2 class="contact-title">Let's Create Something Amazing</h2>
+            <p class="contact-subtitle">I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.</p>
+            
+            <!-- Social media and contact links -->
+            <div class="social-links">
+                <!-- Email link -->
+                <a href="mailto:hazuri@example.com" class="social-link">
+                    <span>📧</span>
+                    <span>Email</span>
+                </a>
+                
+                <!-- LinkedIn link -->
+                <a href="https://linkedin.com/in/hazuridhillon" class="social-link" target="_blank">
+                    <span>💼</span>
+                    <span>LinkedIn</span>
+                </a>
+                
+                <!-- Twitter link -->
+                <a href="https://twitter.com/hazuridhillon" class="social-link" target="_blank">
+                    <span>🐦</span>
+                    <span>Twitter</span>
+                </a>
+                
+                <!-- GitHub link -->
+                <a href="https://github.com/hazuridhillon" class="social-link" target="_blank">
+                    <span>💻</span>
+                    <span>GitHub</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2026 Hazuri K. Dhillon. Designed and built with passion.</p>
+    </footer>
+
+    <!-- ============================================
+         JAVASCRIPT - Makes the page interactive
+         ============================================ -->
+    <script>
+        // SMOOTH SCROLLING FOR NAVIGATION LINKS
+        // When someone clicks a navigation link, smoothly scroll to that section
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault(); // Prevent default jump behavior
+                const target = document.querySelector(this.getAttribute('href')); // Find the section to scroll to
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth', // Smooth scrolling
+                        block: 'start'      // Align to top of section
+                    });
+                }
+            });
+        });
+
+        // ADD SHADOW TO NAVIGATION WHEN SCROLLING
+        let lastScroll = 0;
+        const nav = document.querySelector('nav'); // Get the navigation element
+        
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset; // How far user has scrolled
+            
+            // If scrolled more than 100 pixels, add shadow to nav
+            if (currentScroll > 100) {
+                nav.style.boxShadow = '0 2px 20px rgba(10, 24, 40, 0.1)';
+            } else {
+                nav.style.boxShadow = 'none'; // Remove shadow at top
+            }
+            
+            lastScroll = currentScroll;
+        });
+
+        // ANIMATE ELEMENTS WHEN THEY COME INTO VIEW
+        // Set up options for the observer
+        const observerOptions = {
+            threshold: 0.1,                    // Trigger when 10% visible
+            rootMargin: '0px 0px -100px 0px'  // Trigger slightly before fully in view
+        };
+
+        // Create an observer that watches for elements entering the viewport
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    // Element is now visible, fade it in
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Make project cards, experience items, and stat boxes fade in on scroll
+        document.querySelectorAll('.project-card, .experience-item, .stat-item').forEach(el => {
+            el.style.opacity = '0';              // Start invisible
+            el.style.transform = 'translateY(30px)'; // Start below normal position
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease'; // Smooth transition
+            observer.observe(el);                // Watch this element
+        });
+    </script>
+</body>
+</html>
